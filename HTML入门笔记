@@ -1,0 +1,46 @@
+//带有<>类型的称为标签，标签一般成对出现，在第一个标签中可以设置属性（格式为：属性名1="属性值" 属性名2="属性值"），不同类型的标签属性也会有所不同，第二个标签要加上"/"符号表示结束
+//从开始标签到结束标签的所有代码称为元素
+
+<html>
+	<head>  //head:网页头,这里面的内容不会显示在网页里
+		<meta charset="utf-8">  //设置网页编码格式，<meta>标签不成对
+		<title>网页名</title>  //设置网页的标题（浏览器的选项卡上显示的内容）
+		<style>  //<style>标签用于自定义属性，以便body中的标签使用，一般用于对样式的设定
+		.example1{  //点"."不能少，点"."代表一个class
+			float: left;  //控制元素浮动
+    		margin: 5px;  //外边距为5像素
+    		padding: 15px;  //内边距为15像素
+    		width: 300px;  //宽度为350像素
+    		height: 250px;  //高度为240像素
+    		border: 3px solid #ff0000;  //边框为3像素，颜色为ff0000（红色）
+		}
+		.example2{
+			...
+		}
+		...
+		...
+		</style>
+	</head>
+	<body>  //body:网页体，网页的具体内容 <body>分为三个部分，分别为<header><section><footer>，即网页的最上面、中间和最下面
+		<header>
+			<h1 style="color:#ff0000;">一级标题名(红色）</h1>  //style属性用来定义文本类标签的样式，包括但不限于字体，字体颜色，字体大小，字体间距，文字对齐方式
+			<h2>二级标题名</h2>
+			<h3>三级标题名</h3>  //标题字体大小递减
+		</header>
+		<section>
+			<nav class="example2"> //nav:导航栏
+				<a href="url" target="_blank">链接文本</a>  //href属性为链接的URL，target="_blank"表示浏览器总在一个新打开、未命名的窗口中载入目标文档
+			</nav>
+			<p>段落内容</p>
+			<div class="example1">  //<div>标签表示一个块，属性class="example1"表示这个div块应用之前定义的example1中的样式
+				<h2>二级标题内容</h2>
+				<p>段落内容</p>
+			</div>
+			<div id="id名">  //属性id用于对元素编号（取名），一个id只对应一个元素（唯一性）
+				<h2>二级标题内容</h2>
+				<p>段落内容</p>
+			</div>
+		</section>
+		<footer></footer>
+	</body>
+</html>
